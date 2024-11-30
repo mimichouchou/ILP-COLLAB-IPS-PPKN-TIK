@@ -1,0 +1,142 @@
+
+@font-face {
+    font-family: 'Hearts';
+    src: url(fonts/rainyhearts.ttf)format('truetype');
+}
+@font-face {
+    font-family: 'Thicc Pixel';
+    src: url(fonts/04B_30__.TTF)format('truetype');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(backtrial.png); 
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    color: #333;
+    padding-top: 200px;
+}
+
+
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;     
+    width: 100%;   
+    z-index: 1000; 
+    text-align: center;
+    padding: 2px;
+    background-color: #afd566;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+.Header img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.navbar {
+    position: fixed; 
+    top: 150px;      
+    left: 0;         
+    width: 100%;     
+    background-color: #e4687f; 
+    font-family: 'Thicc Pixel', sans-serif;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #ffabbb;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #afd566; 
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    background-color: #e4687f; 
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffabbb;
+}
+
+.has-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.textbox {
+    max-width: 800px; 
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 4px solid #ffd1dc; 
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-size: 20px; 
+    font-family: 'Hearts';
+    color: #e4687f; 
+    line-height: 2;
+}
+
+.textbox h2 {
+    font-size: 32px; 
+    margin-bottom: 20px;
+    color: #ff69b4; 
+}
+
+.textbox p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
